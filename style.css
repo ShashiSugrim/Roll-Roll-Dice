@@ -1,0 +1,45 @@
+
+table{
+	border: thick solid grey;
+	width:50%;
+	border-radius:10px;
+}
+			
+th, td{
+	border: thin solid black;
+	padding:10px;
+	width:25%;
+}
+input[type=number] {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+body{
+    background:yellowgreen;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Staatliches', cursive;
+    padding-left: 50px;
+    color:white;
+}
+button{
+	
+	background-color:lightblue;
+	border-radius:5px;
+}
+button {
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+img{
+	position:absolute;
+	width:300px;
+	height:auto;
+	top:10px;
+	right:100px;
+}

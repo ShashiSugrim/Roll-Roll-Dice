@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<style>	</style>
+		<link rel= "stylesheet" href = "style.css"/>
+
+		<script src="script.js"></script>
+		<script>
+			function initialize(){
+				diceTable = document.getElementById("dicetable");
+				statsTable = document.getElementById("statstable");
+				eventlog = document.getElementById("eventlog");
+				mean = 0;
+				mode = 0;
+				median = 0;
+				frequencies = [];
+				doubles = 0;
+				triples = 0;
+				numofrolldice = 0;
+				listofcreated = [];
+				totalrolls = 0;
+				rollNum=0
+			}
+
+		</script>
+	</head>
+	
+	<body onload="initialize();">
+	<h1 id="greeting">Input Dice and # to Roll Dice</h1>
+	<img src="dice.png"/>
+	<div id="eventlog" >
+		
+	</div>
+	<form id="inputform">
+		<input checked="checked" type="radio" name="dicenum" value="1" onclick="updateStats(1);">One Dice<br>
+		<input type="radio" name="dicenum" value="2" onclick="updateStats(2);">Two Dice<br>
+		<input type="radio" name="dicenum" value="3" onclick="updateStats(3);">Three Dice<br>
+
+	<h3>
+	Number of Times to roll: <input name="numoftimesroll" type="number" min="0"/>
+	<button type="button" onclick="rollDice();">Roll Dice</button>
+	<button type="button" onclick="deleteAllCumulativeStats();">Delete All Cumulative</button>
+	<button type="button" onclick="rollNum=0;clearLog();eventlog.innerHTML+='Roll# ' + rollNum+' data is currently being shown in Statistics Table'+'</br>';deleteAllStats();">Reset Roll Number</button>
+	</h3>
+	</form>
+		<table id="statstable" style="float: left;">
+
+			<tr>
+				<th>Statistic</th>
+				<th>Value</th>
+
+			</tr>
+		</table>
+
+		<table id="dicetable">
+			<tr>
+				<th colspan="100%">Cumulative Results</th>
+			</tr>
+			<tr>
+
+				<th>Roll</th>
+				<th>Result Die 1</th>
+				<th>Result Die 2</th>
+				<th>Result Die 3</th>
+
+			</tr>
+		</table>
+	</body>
+</html>
